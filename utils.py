@@ -1,4 +1,4 @@
-import tensorflow as tf
+import tflite_runtime.interpreter as tflite
 import numpy as np
 from tensorflow.keras.preprocessing import image
 from gtts import gTTS
@@ -6,7 +6,7 @@ import os
 from PIL import Image
 import uuid
 
-model = tf.keras.models.load_model("plant_disease_model.h5")
+model = tflite.keras.models.load_model("plant_disease_model.h5")
 IMG_SIZE = 224
 
 # Replace with your actual class labels
